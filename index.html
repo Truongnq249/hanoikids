@@ -16,181 +16,319 @@
         <div class="container">
             <div class="booking-step d-flex justify-content-between">
                 <div class="booking-step__item active">
-                    <p>Booking details</p>
+                    <p class="booking-step__item-name">Booking details</p>
                     <span>1</span>
                 </div>
                 <div class="booking-step__item active">
-                    <p>Personal details</p>
+                    <p class="booking-step__item-name">Personal details</p>
                     <span>2</span>
                 </div>
                 <div class="booking-step__item">
-                    <p>Checkout</p>
+                    <p class="booking-step__item-name">Checkout</p>
                     <span>3</span>
                 </div>
             </div>
-            <p class="booking-title text-center">Choose Tour Package</p>
-            <div class="tour-list hz-row">
-                <div class="col-md-4">
-                    <div class="tour-item">
-                        <label>
-                            <input type="radio" name="tour" id="virtual-tour" checked>
-                            <span class="tour-item-checked">
-                                <img src="svg/check-shadow.svg" alt="">
-                                <span>Virtual Tour</span>
-                            </span>
-                            <span class="tour-item__image">
-                                <img src="images/booking-1.png" alt="">
-                            </span>
-                            <span class="tour-item__content">
-                                <span class="tour-item__name">Virtual Tour</span>
-                                <span class="tour-item__desc">Travelling without leaving the couch, you can dig deeper into Viet people and exchange cultural differences  by our new type of tour. </span>
-                                <span class="tour-item__list">
-                                    <em>Duration: ~ 1 hour.</em>
-                                    <em>Platform: Google Meet / Zoom.</em>
-                                </span>
-                                <span class="tour-item__button">
-                                    Choose 
-                                </span>
-                            </span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="tour-item">
-                        <label>
-                            <input type="radio" name="tour" id="city-tour">
-                            <span class="tour-item-checked">
-                                <img src="svg/check-shadow.svg" alt="">
-                                <span>City Tour</span>
-                            </span>
-                            <span class="tour-item__image">
-                                <img src="images/booking-2.png" alt="">
-                            </span>
-                            <span class="tour-item__content">
-                                <span class="tour-item__name">City Tour</span>
-                                <span class="tour-item__desc">Experience local life by wandering through the maze of Hanoi, enjoying a lovely atmosphere in this bustling city.</span>
-                                <span class="tour-item__list">
-                                    <em>Duration: ~ 3 hours.</em>
-                                    <em>Platform: Walking / Taxi.</em>
-                                </span>
-                                <span class="tour-item__button">
-                                    Choose 
-                                </span>
-                            </span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="tour-item">
-                        <label>
-                            <input type="radio" name="tour" id="food-tour">
-                            <span class="tour-item-checked">
-                                <img src="svg/check-shadow.svg" alt="">
-                                <span>Food Tour</span>
-                            </span>
-                            <span class="tour-item__image">
-                                <img src="images/booking-3.png" alt="">
-                            </span>
-                            <span class="tour-item__content">
-                                <span class="tour-item__name">Food Tour</span>
-                                <span class="tour-item__desc">Being a street food taster in Hanoi is a good way to explore our culinary world and get a feel for the vibe of this wonderful city.</span>
-                                <span class="tour-item__list">
-                                    <em>Duration: ~ 2 hours.</em>
-                                    <em>Platform: Walking / Taxi.</em>
-                                </span>
-                                <span class="tour-item__button">
-                                    Choose 
-                                </span>
-                            </span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="booking-form">
-                <p class="booking-title text-center">Booking Details</p>
-                <p class="booking-desc text-italic text-center">All fields marked with * are required</p>
-                <div class="booking-form-inner booking-form-inner-1">
-                    <form action="">
-                        <input type="hidden" name="" id="booking-name">
-                        <div class="form-group">
-                            <label for="booking-date-1">Date*</label>
-                            <input type="date" id="booking-date-1">
-                        </div>
-                        <div class="form-group">
-                            <label for="booking-time-1">Starting time*</label>
-                            <input type="time" id="booking-time-1">
-                        </div>
-                        <div class="form-group">
-                            <label for="booking-number-1">Number of participants*</label>
-                            <div class="input-number js-quantity">
-                                <input type="number" value="01" min="1" max="100" id="booking-number-1">
-                                <div class="input-number__button d-flex">
-                                    <span class="btn btn-minus">
-                                        <svg id="Add" xmlns="http://www.w3.org/2000/svg" width="16" height="3.429" viewBox="0 0 16 3.429">
-                                            <path id="Union_1" data-name="Union 1" d="M16,8a1.714,1.714,0,0,1-1.714,1.714H1.714a1.714,1.714,0,0,1,0-3.429H14.286A1.714,1.714,0,0,1,16,8Z" transform="translate(0 -6.286)" fill="currentColor"/>
-                                          </svg>
+            <div class="booking-tab__content">
+                <div class="booking-tab__pane">
+                    <p class="booking-title text-center">Choose Tour Package</p>
+                    <div class="tour-list hz-row">
+                        <div class="col-9 col-md-4">
+                            <div class="tour-item">
+                                <label>
+                                    <input type="radio" name="tour" id="virtual-tour" checked>
+                                    <span class="tour-item-checked">
+                                        <img src="svg/check-shadow.svg" alt="">
+                                        <span>Virtual Tour</span>
                                     </span>
-                                    <span class=" btn btn-plus">
-                                        <svg xmlns="http://www.w3.org/2000/svg" id="Add" width="16" height="16" viewBox="0 0 16 16">
-                                            <path id="Union_1" data-name="Union 1" d="M6.286,14.287V9.715H1.715a1.715,1.715,0,0,1,0-3.429H6.286V1.715a1.715,1.715,0,0,1,3.429,0V6.286h4.571a1.715,1.715,0,0,1,0,3.429H9.715v4.572a1.715,1.715,0,0,1-3.429,0Z" fill="currentColor"/>
-                                          </svg>
+                                    <span class="tour-item__image">
+                                        <img src="images/booking-1.png" alt="">
                                     </span>
+                                    <span class="tour-item__content">
+                                        <span class="tour-item__name">Virtual Tour</span>
+                                        <span class="tour-item__desc">Travelling without leaving the couch, you can dig deeper into Viet people and exchange cultural differences  by our new type of tour. </span>
+                                        <span class="tour-item__list">
+                                            <em>Duration: ~ 1 hour.</em>
+                                            <em>Platform: Google Meet / Zoom.</em>
+                                        </span>
+                                        <span class="tour-item__button">
+                                            Choose 
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-9 col-md-4">
+                            <div class="tour-item">
+                                <label>
+                                    <input type="radio" name="tour" id="city-tour">
+                                    <span class="tour-item-checked">
+                                        <img src="svg/check-shadow.svg" alt="">
+                                        <span>City Tour</span>
+                                    </span>
+                                    <span class="tour-item__image">
+                                        <img src="images/booking-2.png" alt="">
+                                    </span>
+                                    <span class="tour-item__content">
+                                        <span class="tour-item__name">City Tour</span>
+                                        <span class="tour-item__desc">Experience local life by wandering through the maze of Hanoi, enjoying a lovely atmosphere in this bustling city.</span>
+                                        <span class="tour-item__list">
+                                            <em>Duration: ~ 3 hours.</em>
+                                            <em>Platform: Walking / Taxi.</em>
+                                        </span>
+                                        <span class="tour-item__button">
+                                            Choose 
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-9 col-md-4">
+                            <div class="tour-item">
+                                <label>
+                                    <input type="radio" name="tour" id="food-tour">
+                                    <span class="tour-item-checked">
+                                        <img src="svg/check-shadow.svg" alt="">
+                                        <span>Food Tour</span>
+                                    </span>
+                                    <span class="tour-item__image">
+                                        <img src="images/booking-3.png" alt="">
+                                    </span>
+                                    <span class="tour-item__content">
+                                        <span class="tour-item__name">Food Tour</span>
+                                        <span class="tour-item__desc">Being a street food taster in Hanoi is a good way to explore our culinary world and get a feel for the vibe of this wonderful city.</span>
+                                        <span class="tour-item__list">
+                                            <em>Duration: ~ 2 hours.</em>
+                                            <em>Platform: Walking / Taxi.</em>
+                                        </span>
+                                        <span class="tour-item__button">
+                                            Choose 
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-form">
+                        <p class="booking-title text-center">Booking Details</p>
+                        <p class="booking-desc text-italic text-center">All fields marked with * are required</p>
+                        <div class="booking-form-inner booking-form-inner-1">
+                            <form action="">
+                                <input type="hidden" name="" id="booking-name">
+                                <div class="form-group">
+                                    <label for="booking-date-1">Date*</label>
+                                    <input type="date" id="booking-date-1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-time-1">Starting time*</label>
+                                    <input type="time" id="booking-time-1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-number-1">Number of participants*</label>
+                                    <div class="input-number js-quantity">
+                                        <input type="number" value="01" min="1" max="100" id="booking-number-1">
+                                        <div class="input-number__button d-flex">
+                                            <span class="btn btn-minus">
+                                                <svg id="Add" xmlns="http://www.w3.org/2000/svg" width="16" height="3.429" viewBox="0 0 16 3.429">
+                                                    <path id="Union_1" data-name="Union 1" d="M16,8a1.714,1.714,0,0,1-1.714,1.714H1.714a1.714,1.714,0,0,1,0-3.429H14.286A1.714,1.714,0,0,1,16,8Z" transform="translate(0 -6.286)" fill="currentColor"/>
+                                                  </svg>
+                                            </span>
+                                            <span class=" btn btn-plus">
+                                                <svg xmlns="http://www.w3.org/2000/svg" id="Add" width="16" height="16" viewBox="0 0 16 16">
+                                                    <path id="Union_1" data-name="Union 1" d="M6.286,14.287V9.715H1.715a1.715,1.715,0,0,1,0-3.429H6.286V1.715a1.715,1.715,0,0,1,3.429,0V6.286h4.571a1.715,1.715,0,0,1,0,3.429H9.715v4.572a1.715,1.715,0,0,1-3.429,0Z" fill="currentColor"/>
+                                                  </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-request-1">Special request *</label>
+                                    <input type="text" placeholder='Write "none" if you dont have any' id="booking-request-1">
+                                </div>
+                            </form>
+                            <a href="javascript:void(0)" class="booking-button">CONTINUE</a>
+                        </div>
+                        <div class="booking-form-inner booking-form-inner-2">
+                            <form action="">
+                                <input type="hidden" name="" id="booking-name">
+                                <div class="form-group">
+                                    <label for="booking-date-1">Date*</label>
+                                    <input type="date" id="booking-date-1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-time-1">Starting time*</label>
+                                    <input type="time" id="booking-time-1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-number-1">Number of participants*</label>
+                                    <div class="input-number js-quantity">
+                                        <input type="number" value="01" min="1" max="100" id="booking-number-1">
+                                        <div class="input-number__button d-flex">
+                                            <span class="btn btn-minus">
+                                                <svg id="Add" xmlns="http://www.w3.org/2000/svg" width="16" height="3.429" viewBox="0 0 16 3.429">
+                                                    <path id="Union_1" data-name="Union 1" d="M16,8a1.714,1.714,0,0,1-1.714,1.714H1.714a1.714,1.714,0,0,1,0-3.429H14.286A1.714,1.714,0,0,1,16,8Z" transform="translate(0 -6.286)" fill="currentColor"/>
+                                                  </svg>
+                                            </span>
+                                            <span class=" btn btn-plus">
+                                                <svg xmlns="http://www.w3.org/2000/svg" id="Add" width="16" height="16" viewBox="0 0 16 16">
+                                                    <path id="Union_1" data-name="Union 1" d="M6.286,14.287V9.715H1.715a1.715,1.715,0,0,1,0-3.429H6.286V1.715a1.715,1.715,0,0,1,3.429,0V6.286h4.571a1.715,1.715,0,0,1,0,3.429H9.715v4.572a1.715,1.715,0,0,1-3.429,0Z" fill="currentColor"/>
+                                                  </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-dishes">Preferred dishes*</label>
+                                    <input readonly type="text" placeholder="Add your wanna-try dishes" class="js-modal" data-target="dishes-modal">
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-request-1">Special request *</label>
+                                    <input type="text" placeholder='Write "none" if you dont have any' id="booking-request-1">
+                                </div>
+                            </form>
+                            <a href="javascript:void(0)" class="booking-button">CONTINUE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-tab__pane">
+                    <p class="booking-title text-center">Personal Details</p>
+                    <p class="booking-desc text-italic text-center">All fields marked with * are required</p>
+                    <div class="booking-form-inner">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="pi-name">Full Name *</label>
+                                <input type="text" id="pi-name" placeholder="First name & Family name">
+                            </div>
+                            <div class="form-group">
+                                <label for="pi-gender">Gender *</label>
+                                <input type="text" id="pi-gender" placeholder="Choose your gender">
+                            </div>
+                            <div class="form-group">
+                                <label for="pi-dob">Date of birth *</label>
+                                <input type="date" id="pi-dob">
+                            </div>
+                            <div class="form-group">
+                                <label for="pi-nationality">Nationality *</label>
+                                <input type="text" placeholder='Choose nationality' id="pi-nationality">
+                            </div>
+                            <div class="form-group">
+                                <label for="pi-passport">Passport Number *</label>
+                                <input type="text" placeholder='For the safety of Hanoikids members' id="pi-passport">
+                            </div>
+                            <div class="form-group">
+                                <label for="pi-email">Email *</label>
+                                <input type="email" placeholder='For future contact' id="pi-email">
+                            </div>
+                        </form>
+                        <div class="d-flex flex-wrap booking-tab__pane-footer">
+                            <a href="javascript:void(0)" class="hz-button hz-button--blue">CONTINUE</a>
+                            <a href="javascript:void(0)" class="hz-button hz-button--white">GO BACK</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-tab__pane active">
+                    <p class="booking-title text-center">Pickup Location</p>
+                    <p class="booking-desc text-italic text-center">All fields marked with * are required</p>
+                    <div class="booking-form-inner">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="pl-hotel-name">Hotel Name*</label>
+                                <input type="text" id="pl-hotel-name" placeholder="Full hotel name">
+                            </div>
+                            <div class="form-group">
+                                <label for="pl-hotel-address">Hotel Address *</label>
+                                <input type="text" id="pl-hotel-address" placeholder="Full hotel address">
+                            </div>
+                        </form>
+                        <p class="text-center booking-title">Confirm Information</p>
+                        <div class="booking-information">
+                            <div class="booking-information__block">
+                                <div class="booking-information__block-head d-flex">
+                                    <p><strong>Booking Details</strong></p>
+                                    <a href=""><em>Edit</em></a>
+                                </div>
+                                <div class="booking-information__block-body">
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Tour Package:</p>
+                                        <p class="item-right">City tour</p>
+                                    </div>
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Date (dd/mm/yyyy):</p>
+                                        <p class="item-right">10/10/2021</p>
+                                    </div>
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Time:</p>
+                                        <p class="item-right">06:00 PM (GMT+3)</p>
+                                    </div>
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Participants:</p>
+                                        <p class="item-right">3</p>
+                                    </div>
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Special Request</p>
+                                        <p class="item-right">Can we go shopping during the tour?</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="booking-request-1">Special request *</label>
-                            <input type="text" placeholder='Write "none" if you dont have any' id="booking-request-1">
-                        </div>
-                    </form>
-                    <a href="javascript:void(0)" class="booking-button">CONTINUE</a>
-                </div>
-                <div class="booking-form-inner booking-form-inner-2">
-                    <form action="">
-                        <input type="hidden" name="" id="booking-name">
-                        <div class="form-group">
-                            <label for="booking-date-1">Date*</label>
-                            <input type="date" id="booking-date-1">
-                        </div>
-                        <div class="form-group">
-                            <label for="booking-time-1">Starting time*</label>
-                            <input type="time" id="booking-time-1">
-                        </div>
-                        <div class="form-group">
-                            <label for="booking-number-1">Number of participants*</label>
-                            <div class="input-number js-quantity">
-                                <input type="number" value="01" min="1" max="100" id="booking-number-1">
-                                <div class="input-number__button d-flex">
-                                    <span class="btn btn-minus">
-                                        <svg id="Add" xmlns="http://www.w3.org/2000/svg" width="16" height="3.429" viewBox="0 0 16 3.429">
-                                            <path id="Union_1" data-name="Union 1" d="M16,8a1.714,1.714,0,0,1-1.714,1.714H1.714a1.714,1.714,0,0,1,0-3.429H14.286A1.714,1.714,0,0,1,16,8Z" transform="translate(0 -6.286)" fill="currentColor"/>
-                                          </svg>
-                                    </span>
-                                    <span class=" btn btn-plus">
-                                        <svg xmlns="http://www.w3.org/2000/svg" id="Add" width="16" height="16" viewBox="0 0 16 16">
-                                            <path id="Union_1" data-name="Union 1" d="M6.286,14.287V9.715H1.715a1.715,1.715,0,0,1,0-3.429H6.286V1.715a1.715,1.715,0,0,1,3.429,0V6.286h4.571a1.715,1.715,0,0,1,0,3.429H9.715v4.572a1.715,1.715,0,0,1-3.429,0Z" fill="currentColor"/>
-                                          </svg>
-                                    </span>
+
+                        <div class="booking-information">
+                            <div class="booking-information__block">
+                                <div class="booking-information__block-head d-flex">
+                                    <p><strong>Personal Details</strong></p>
+                                    <a href=""><em>Edit</em></a>
+                                </div>
+                                <div class="booking-information__block-body">
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Full name:</p>
+                                        <p class="item-right">Sebastian Nguyen</p>
+                                    </div>
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Gender:</p>
+                                        <p class="item-right">Male</p>
+                                    </div>
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">DoB (dd/mm/yyyy):</p>
+                                        <p class="item-right">01/01/1997</p>
+                                    </div>
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Nationality:</p>
+                                        <p class="item-right">American</p>
+                                    </div>
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Passport Number:</p>
+                                        <p class="item-right">US123456789</p>
+                                    </div>
+                                    <div class="booking-information__block-item d-flex">
+                                        <p class="item-left">Email:</p>
+                                        <p class="item-right">abcd@gmail.com</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group js-dishes-modal">
-                            <label for="booking-dishes">Preferred dishes*</label>
-                            <input readonly type="text" placeholder="Add your wanna-try dishes">
-                        </div>
-                        <div class="form-group">
-                            <label for="booking-request-1">Special request *</label>
-                            <input type="text" placeholder='Write "none" if you dont have any' id="booking-request-1">
-                        </div>
-                    </form>
-                    <a href="javascript:void(0)" class="booking-button">CONTINUE</a>
+                    </div>
+
+                    <div class="booking-checkout">
+                        <p class="booking-checkout-survey">
+                            We would be delighted if you could spare some time to answer <a href=""><strong>this survey</strong></a>
+                        </p>
+                        <p><strong>Important note:</strong></p>
+                        <p>Please carefully check all information that you have filled in the form before clicking "Submit", your booking is successfully recorded only when you are redirected to a page that shows <a href=""><strong>Booking Completed.</strong></a>                            </p>
+                        <p>After submitting this form, you will receive the response email from Hanoikids within 48 hours at the latest. If the response fails to reach your email within 2 days or you have any urgent request, please feel free to contact our
+                            <a href="">Tour Operation Department.</a>
+                        </p>
+                        <p><strong>Your personal data is used only for the purpose of the tour and communications between you and Hanoikids.</strong> Your passport number is used for guaranteeing the reasonable safety for the members of Hanoikids during
+                            the tour(s). Beside encrypting each booking via SSL protocol, we take all measures required to keep all your personal data secured.</p>
+                    </div>
+                    <div class="d-flex flex-wrap booking-tab__pane-footer">
+                        <a href="javascript:void(0)" class="hz-button hz-button--xl hz-button--blue">SUBMIT</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="hz-modal">
+        <div class="hz-modal" id="dishes-modal">
             <div class="hz-modal__dialog">
-                <div class="hz-modal__close">
+                <div class="hz-modal__close js-close-modal">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20.001" height="20.001" viewBox="0 0 20.001 20.001">
                         <g id="Cancel" transform="translate(0 0)">
                             <path id="Union_3" data-name="Union 3" d="M17.682,19.6,10,11.921,2.318,19.6A1.358,1.358,0,1,1,.4,17.682L8.08,10,.4,2.318A1.358,1.358,0,0,1,2.318.4L10,8.08,17.682.4A1.358,1.358,0,1,1,19.6,2.318L11.921,10,19.6,17.682A1.358,1.358,0,1,1,17.682,19.6Z" transform="translate(-0.001 -0.001)" fill="currentColor"/>
@@ -212,117 +350,1320 @@
                         <li class="tab"><a href="#tab_tab-5-title"><span>Lactose-free</span></a></li>
                     </ul>
                     <div class="tab-panels">
-                        <div class="panel entry-content active" id="tab_tab-1-title">
-                            <div class="hz-modal-dishes__carousel" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true ,"prevNextButtons":false,"pageDots":false,"autoPlay": 2500}'>
-                                <div class="hz-row">
-                                    <div class="col-6">
-                                        <a href="" class="dishes__item d-block">
-                                            <div href="" class="dishes__item-image">
-                                                <img src="images/food.jpg" alt="">
-                                            </div>
-                                            <div class="dishes__item-content">
-                                                <p class="dishes__item-name">Banh Mi</p>
-                                                <ul>
-                                                    <li>Food type: Breads </li>
-                                                    <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
-                                                    <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
-                                                </ul>
-                                                <div class="dishes__item-choose">
-                                                    <label>
-                                                        Choose
-                                                        <input type="checkbox" data-name="Banh Mi">
-                                                        <span class="checkmark"></span>
-                                                    </label>
+                        <div class="panel active" id="tab_tab-1-title">
+                            <!-- Carousel desktop -->
+                            <div class="hz-modal-dishes__carousel d-none d-lg-block" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <div class="hz-row">
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
                                                 </div>
-                                            </div>
-                                        </a>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <a href="" class="dishes__item d-block">
-                                            <div href="" class="dishes__item-image">
-                                                <img src="images/food.jpg" alt="">
-                                            </div>
-                                            <div class="dishes__item-content">
-                                                <p class="dishes__item-name">Banh Mi</p>
-                                                <ul>
-                                                    <li>Food type: Breads </li>
-                                                    <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
-                                                    <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
-                                                </ul>
-                                                <div class="dishes__item-choose">
-                                                    <label>
-                                                        Choose
-                                                        <input type="checkbox" data-name="Banh Mi">
-                                                        <span class="checkmark"></span>
-                                                    </label>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="hz-row">
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
                                                 </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="" class="dishes__item d-block">
-                                            <div href="" class="dishes__item-image">
-                                                <img src="images/food.jpg" alt="">
-                                            </div>
-                                            <div class="dishes__item-content">
-                                                <p class="dishes__item-name">Banh Mi</p>
-                                                <ul>
-                                                    <li>Food type: Breads </li>
-                                                    <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
-                                                    <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
-                                                </ul>
-                                                <div class="dishes__item-choose">
-                                                    <label>
-                                                        Choose
-                                                        <input type="checkbox" data-name="Banh Mi">
-                                                        <span class="checkmark"></span>
-                                                    </label>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="" class="dishes__item d-block">
-                                            <div href="" class="dishes__item-image">
-                                                <img src="images/food.jpg" alt="">
-                                            </div>
-                                            <div class="dishes__item-content">
-                                                <p class="dishes__item-name">Banh Mi</p>
-                                                <ul>
-                                                    <li>Food type: Breads </li>
-                                                    <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
-                                                    <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
-                                                </ul>
-                                                <div class="dishes__item-choose">
-                                                    <label>
-                                                        Choose
-                                                        <input type="checkbox" data-name="Banh Mi">
-                                                        <span class="checkmark"></span>
-                                                    </label>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
                                                 </div>
-                                            </div>
-                                        </a>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Carousel mobile -->
+                            <div class="hz-modal-dishes__carousel d-block d-lg-none" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="panel entry-content" id="tab_tab-2-title">
-
+                        <div class="panel" id="tab_tab-2-title">
+                            <div class="hz-modal-dishes__carousel d-none d-lg-block" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <div class="hz-row">
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-2.png" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-2.png" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-2.png" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-2.png" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel mobile -->
+                            <div class="hz-modal-dishes__carousel d-block d-lg-none" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food-2.png" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food-2.png" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food-2.png" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food-2.png" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="panel entry-content" id="tab_tab-3-title">
-
+                        <div class="panel" id="tab_tab-3-title">
+                            <div class="hz-modal-dishes__carousel d-none d-lg-block" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <div class="hz-row">
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-3.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-3.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-3.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-3.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="hz-row">
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-3.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-3.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-3.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food-3.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: amjet comfortable eight into fewer world running anything nature catch stick poetry tide pass too driving evidence mixture teacher plenty let treated later simply</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel mobile -->
+                            <div class="hz-modal-dishes__carousel d-block d-lg-none" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="panel entry-content" id="tab_tab-4-title">
-
+                        <div class="panel" id="tab_tab-4-title">
+                            <div class="hz-modal-dishes__carousel d-none d-lg-block" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <div class="hz-row">
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="hz-row">
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel mobile -->
+                            <div class="hz-modal-dishes__carousel d-block d-lg-none" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="panel entry-content" id="tab_tab-5-title">
-
+                        <div class="panel" id="tab_tab-5-title">
+                            <div class="hz-modal-dishes__carousel d-none d-lg-block" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <div class="hz-row">
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="hz-row">
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="dishes__item d-block">
+                                                <div href="" class="dishes__item-image">
+                                                    <img src="images/food.jpg" alt="">
+                                                </div>
+                                                <div class="dishes__item-content">
+                                                    <p class="dishes__item-name">Banh Mi</p>
+                                                    <ul>
+                                                        <li>Food type: Breads </li>
+                                                        <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                        <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                                    </ul>
+                                                    <div class="dishes__item-choose">
+                                                        <label>
+                                                            Choose
+                                                            <input type="checkbox" data-name="Banh Mi">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel mobile -->
+                            <div class="hz-modal-dishes__carousel d-block d-lg-none" data-flickity='{ "cellAlign": "left", "contain": true,"imagesLoaded": true,"pageDots":false}'>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-cell">
+                                    <a href="" class="dishes__item d-block">
+                                        <div href="" class="dishes__item-image">
+                                            <img src="images/food.jpg" alt="">
+                                        </div>
+                                        <div class="dishes__item-content">
+                                            <p class="dishes__item-name">Banh Mi</p>
+                                            <ul>
+                                                <li>Food type: Breads </li>
+                                                <li>Ingredients: Bread, pork / chicken / eggs / sausages / vegan style, dried onions, raw vegetables, chili sauce.</li>
+                                                <li>Flavor: Ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl, ngon vcl,...</li>
+                                            </ul>
+                                            <div class="dishes__item-choose">
+                                                <label>
+                                                    Choose
+                                                    <input type="checkbox" data-name="Banh Mi">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="hz-modal__footer d-flex flex-wrap">
+                    <a href="" class="hz-button hz-button--blue">SUBMIT</a>
+                    <a href="javascript:void(0)" class="hz-button hz-button--white js-close-modal">GO BACK</a>
                 </div>
             </div>
 
         </div>
+
         <div class="modal-backdrop--white"></div>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

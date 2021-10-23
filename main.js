@@ -57,20 +57,61 @@ changeTourForm();
 
 
 // Show dishes modal
-function dishesModal() {
+function dishesTab() {
     // Tab
     var navTab = $('.hz-modal__body .tab');
     var navContent = $('.hz-modal__body .panel');
     for (let i = 0; i < navTab.length; i++) {
-        $(navTab[i]).click(function() {
-            console.log(123);
+        $(navTab[i]).click(function(e) {
+            e.preventDefault();
             // Tab
             $(navTab).removeClass('active')
             $(navTab[i]).addClass('active')
                 // Content
             $(navContent).removeClass('active')
             $(navContent[i]).addClass('active')
+                // Resize Flickity
+            $(navContent[i]).find('.hz-modal-dishes__carousel').flickity('resize')
         })
     }
 }
-dishesModal()
+dishesTab()
+
+function modal() {
+    var hzModal = $('.hz-modal');
+    // Open modal
+    $('.js-modal').click(function() {
+        // Block body scroll on modal Show
+        $('body').addClass('overflow-hidden');
+        // Show modal backdrop
+        $('.modal-backdrop--white').addClass('active');
+        for (let i = 0; i < hzModal.length; i++) {
+            if ($(hzModal[i]).attr('id') == $(this).data('target')) {
+                $(hzModal[i]).addClass('active');
+                $(hzModal[i]).find('.hz-modal-dishes__carousel').flickity('resize');
+            }
+        }
+    });
+    // Close modal
+    $('.js-close-modal').click(function() {
+        // Close modal
+        $(this).closest('.hz-modal').removeClass('active');
+        // Close backdrop
+        $('.modal-backdrop--white').removeClass('active');
+        // Enable scroll body on modal hide
+        $('body').removeClass('overflow-hidden')
+    })
+}
+modal()
+
+// Set same height item
+var setHeight = function setSameHeight(h, cl) {
+    var h = 0;
+    $(cl).each(function() {
+        if ($(this).outerHeight() > h) {
+            h = $(this).outerHeight();
+        }
+    }).css({ 'height': h });
+}
+
+var bookingStepName = setHeight('nt', '.booking-step__item-name')
