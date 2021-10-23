@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 154 154">
+  <defs>
+    <filter id="Ellipse_54" x="0" y="0" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feFlood flood-color="#036eb0"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <path id="Union_9" data-name="Union 9" d="M20.326,39.544a3.92,3.92,0,0,1-.314-.355L1.137,20.315a3.88,3.88,0,0,1,5.486-5.487L23.089,31.293,53.246,1.136a3.88,3.88,0,1,1,5.487,5.487L25.812,39.544a3.88,3.88,0,0,1-5.486,0Z" transform="translate(0 0)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_603" data-name="Group 603" transform="translate(24556 -5397)">
+    <g transform="matrix(1, 0, 0, 1, -24556, 5397)" filter="url(#Ellipse_54)">
+      <circle id="Ellipse_54-2" data-name="Ellipse 54" cx="50" cy="50" r="50" transform="translate(27 27)" fill="#036eb0"/>
+    </g>
+    <g id="Mask_Group_566" data-name="Mask Group 566" transform="translate(-24507.586 5453.35)" clip-path="url(#clip-path)">
+      <circle id="Ellipse_55" data-name="Ellipse 55" cx="40.665" cy="40.665" r="40.665" transform="translate(-16.266 -24.404)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
